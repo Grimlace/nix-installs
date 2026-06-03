@@ -7,7 +7,8 @@
   starship
   fastfetch
   ripgrep 
-  eza 
+  eza
+  zoxide
   bat
   fd 
   fzf 
