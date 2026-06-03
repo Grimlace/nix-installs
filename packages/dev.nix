@@ -1,6 +1,7 @@
 { pkgs }: with pkgs; [
+  ghostty
+
   mise 
   gh 
-  neovim
   tmux
 ]

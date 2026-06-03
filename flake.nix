@@ -14,11 +14,6 @@
         home-manager.follows = "home-manager";
       };
     };
-
-    helium-browser = {
-        url = "github:schembriaiden/helium-browser-nix-flake";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { nixpkgs, home-manager, zen-browser, ... }:
@@ -26,7 +21,7 @@
       system = "x86_64-linux";
       pkgs   = nixpkgs.legacyPackages.${system};
     in {
-      homeConfigurations."skarr" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${builtins.getEnv "USER"} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home.nix ];
         extraSpecialArgs = { inherit zen-browser system; };
