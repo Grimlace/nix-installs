@@ -21,7 +21,7 @@
       system = "x86_64-linux";
       pkgs   = nixpkgs.legacyPackages.${system};
     in {
-      homeConfigurations.${builtins.getEnv "USER"} = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."grim" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home.nix ];
         extraSpecialArgs = { inherit zen-browser system; };

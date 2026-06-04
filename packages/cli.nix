@@ -1,7 +1,4 @@
 { pkgs }: with pkgs; [
-  fish
-  nushell
-
   yazi
   neovim
   starship

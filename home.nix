@@ -1,7 +1,7 @@
 { pkgs, zen-browser, system, ... }: {
 
-  home.username      = "skarr";
-  home.homeDirectory = "/home/skarr";
+  home.username      = "grim";
+  home.homeDirectory = "/home/grim";
   home.stateVersion  = "24.05";
   programs.home-manager.enable = true;
 
